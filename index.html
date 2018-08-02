@@ -1,0 +1,66 @@
+<html>
+<head>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <script src="assets/scripts/contract.js"></script>
+   <script src="assets/js/chart.js"></script>
+   <script>var myController = {};</script>
+   <script src="assets/scripts/app-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="text-align: center;margin: 35px;">
+                <h2>Plasma or StateChannel</h2>
+            </div>
+        </div>
+        <div class="alert alert-success" role="alert">
+            <label>Latest Vote :</label> <label id="votedBy">_</label>
+            <label>Voted For: </label><label id="votedFor"> _</label>
+        </div>
+        <div class="row">
+            <div class="col-12" style="text-align: left;margin: 35px;">
+                <h4>Total Votes Plasma: <label id="totalVotesPlasma"></label> StateChannel: <label id="totalVotesStateChannel"></label></h4></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="card text-center">
+                    <div class="media">
+                        <img class="mr-3" src="assets/images/russia.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"> Plasma or StateChannel </h3>
+                        <form>
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <img class="mr-3" src="assets/images/plasma.png" alt="Plasma">
+                                    <input class="form-check-input" type="radio" name="winnerRadio" id="inlineRadio1"
+                                           value="1" checked>
+                                    <label class="form-check-label" for="inlineRadio1">Plasma</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <img class="mr-3" src="assets/images/statechannel.png" alt="StateChannel">
+                                    <input class="form-check-input" type="radio" name="winnerRadio" id="inlineRadio2"
+                                           value="2">
+                                    <label class="form-check-label" for="inlineRadio2">StateChannel</label>
+                                </div>
+                            </div>
+                            <button type="button" onclick="myController.vote()" class=" btn btn-primary">Vote</button>
+                            <button type="button" onclick="myController.getMyVote()" class=" btn btn-primary">MY
+                                Vote
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <h4>Total Votes: <label id="totalVotes"></label></h4>
+                <canvas id="myChart" width="100" height="100"></canvas>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>
